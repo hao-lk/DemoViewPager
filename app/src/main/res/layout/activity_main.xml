@@ -7,12 +7,6 @@
     android:layout_margin="5dp"
     android:orientation="vertical">
 
-    <!--<android.support.design.widget.TabLayout-->
-    <!--android:id="@+id/tabTitle"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center" />-->
-
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"

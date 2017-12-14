@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager mViewPager;
     private TextView mTvSkip;
     private PageIndicatorView mPageIndicatorView;
-    private Boolean mIsLastViewPager = false;
+    public static Boolean sIsLastViewPager = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,15 +38,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 // last viewpager
-                mIsLastViewPager = position == mStrings.length - 1;
+                sIsLastViewPager = position == mStrings.length - 1;
             }
 
             @Override
             public void onPageScrollStateChanged(int state) {
                 // Check if it last viewpager and scroll
-                if (mIsLastViewPager && state == ViewPager.SCROLL_STATE_DRAGGING) {
+                if (sIsLastViewPager && state == ViewPager.SCROLL_STATE_DRAGGING) {
                     startActivity(new Intent(MainActivity.this, SecondActivity.class));
-                    mIsLastViewPager = false;
+                    sIsLastViewPager = false;
                 }
             }
         });
