@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:attr="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="5dp"
@@ -16,6 +18,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <com.rd.PageIndicatorView
+        android:id="@+id/pageIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        app:piv_selectedColor="#fc0000"
+        app:piv_unselectedColor="#000000"
+        attr:piv_animationType="swap"
+        attr:piv_interactiveAnimation="true"
+        attr:piv_viewPager="@+id/viewpager" />
+
     <TextView
         android:id="@+id/tvSkip"
         android:layout_width="wrap_content"
@@ -24,6 +39,5 @@
         android:layout_alignParentRight="true"
         android:text="Skip"
         android:textColor="#0008ff"
-        android:textSize="20sp"
-        android:visibility="gone" />
+        android:textSize="20sp" />
 </RelativeLayout>
