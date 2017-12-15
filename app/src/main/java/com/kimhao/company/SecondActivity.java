@@ -15,9 +15,8 @@ public class SecondActivity extends AppCompatActivity {
         setupViewPager();
     }
 
-
     private void setupViewPager() {
-        final ViewPager viewPager = findViewById(R.id.viewpagerImage);
+        final ViewPager viewPager = findViewById(R.id.viewPager);
         setupViewPager(viewPager);
 
         TabLayout tabLayout = findViewById(R.id.tabTitle);
@@ -27,7 +26,7 @@ public class SecondActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         FragmentPagerAdapter adapter = new FragmentPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new TabFragment(), "Information");
+//        adapter.addFrag(new HomeFragment(), "Information");
         adapter.addFrag(new TabFragment(), "Programm");
         adapter.addFrag(new TabFragment(), "Price");
         adapter.addFrag(new TabFragment(), "Media");
